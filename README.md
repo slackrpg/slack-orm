@@ -1,6 +1,6 @@
-# Slack Client
+# Slack ORM
 
-A reusable Node.js module for integrating with the Slack API.
+Provides an Object Relationional Model for interfacing with the Slack API.
 
 [![Version][version-image]][version-url]
 [![Build Status][build-image]][build-url]
@@ -12,17 +12,17 @@ A reusable Node.js module for integrating with the Slack API.
 
 ### Contributing
 
-There are many ways to contribute to the Slack client module!  If you have an idea, or have discovered a bug, please
-[Open an Issue](https://github.com/slackrpg/slack-client/issues) so it can be addressed.
+There are many ways to contribute to the Slack ORM module!  If you have an idea, or have discovered a bug, please
+[Open an Issue](https://github.com/slackrpg/slack-orm/issues) so it can be addressed.
 
 If you're interested in contributing to the project through design or development, please read our
-[Contribution Guidelines](https://github.com/slackrpg/slack-client/blob/master/CONTRIBUTING.md).
+[Contribution Guidelines](https://github.com/slackrpg/slack-orm/blob/master/CONTRIBUTING.md).
 
 
 ### Release Policy
 
-Releases of the Slack client module follow [Semantic Versioning](http://semver.org/) standards in a
-`MAJOR.MINOR.PATCH` versioning scheme of the following format:
+Releases of the Slack ORM module follow [Semantic Versioning](http://semver.org/) standards in a `MAJOR.MINOR.PATCH`
+versioning scheme of the following format:
 
 * `MAJOR` - modified when major, incompatible changes are made to the library,
 * `MINOR` - modified when functionality is added in a backwards-compatible mannder, and
@@ -37,13 +37,13 @@ Copyright &copy; 2015 Andrew Vaughan - Released under the [MIT license](LICENSE)
 
 
 [version-image]:    http://img.shields.io/badge/version-0.0.0-blue.svg?style=flat
-[version-url]:      https://github.com/slackrpg/slack-client/releases
-[build-url]:        https://travis-ci.org/slackrpg/slack-client
-[build-image]:      https://travis-ci.org/slackrpg/slack-client.svg?branch=master
-[docs-image]:       http://inch-ci.org/github/slackrpg/slack-client.svg?branch=master
-[docs-url]:         http://inch-ci.org/github/slackrpg/slack-client
-[dependency-image]: https://david-dm.org/slackrpg/slack-client.svg
-[dependency-url]:   https://david-dm.org/slackrpg/slack-client
-[coverage-image]:   https://codeclimate.com/github/slackrpg/slack-client/badges/coverage.svg
-[quality-image]:    https://codeclimate.com/github/slackrpg/slack-client/badges/gpa.svg
-[quality-url]:      https://codeclimate.com/github/slackrpg/slack-client
+[version-url]:      https://github.com/slackrpg/slack-orm/releases
+[build-url]:        https://travis-ci.org/slackrpg/slack-orm
+[build-image]:      https://travis-ci.org/slackrpg/slack-orm.svg?branch=master
+[docs-image]:       http://inch-ci.org/github/slackrpg/slack-orm.svg?branch=master
+[docs-url]:         http://inch-ci.org/github/slackrpg/slack-orm
+[dependency-image]: https://david-dm.org/slackrpg/slack-orm.svg
+[dependency-url]:   https://david-dm.org/slackrpg/slack-orm
+[coverage-image]:   https://codeclimate.com/github/slackrpg/slack-orm/badges/coverage.svg
+[quality-image]:    https://codeclimate.com/github/slackrpg/slack-orm/badges/gpa.svg
+[quality-url]:      https://codeclimate.com/github/slackrpg/slack-orm
