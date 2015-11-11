@@ -1,24 +1,24 @@
 # Contributing
 
-The Slack client would not exist without its contributors, and we welcome you to join us in our endeavor.  This guide
-is intended for anyone who wants to contribute to the [Slack client](http://github.com/slackrpg/slack-client) project.
-Please read this document carefully before contributing, as it answers many of the questions that new contributors
-have when first working with our projects.
+The Slack ORM module would not exist without its contributors, and we welcome you to join us in our endeavor.  This
+guide is intended for anyone who wants to contribute to the [Slack ORM](http://github.com/slackrpg/slack-orm)
+project. Please read this document carefully before contributing, as it answers many of the questions that new
+contributors have when first working with our projects.
 
 
 ## Agreement
 
-By submitting any work to the The Slack client project, you agree to our [open-source license](LICENSE) as well as to
+By submitting any work to the the Slack ORM project, you agree to our [open-source license](LICENSE) as well as to
 the following principal guidelines:
 
 1. Any work contributed is original work or you otherwise have the right to submit the work;
-1. You grant the Slack client project a non-exclusive, irrevocable license to use your submitted code in any way; and,
+1. You grant the Slack ORM project a non-exclusive, irrevocable license to use your submitted code in any way; and,
 1. You are capable of granting these rights for the contribution.
 
 
 ## Ways to Contribute
 
-There are many ways to contribute to the The Slack client repository:
+There are many ways to contribute to the Slack ORM module:
 
 * **Report a Bug** - if you find a bug, please [file a detailed issue](#bug-reports)
 * **Request a Feature** - if you want to request a feature, please [file a request](#feature-requests)
@@ -27,8 +27,8 @@ There are many ways to contribute to the The Slack client repository:
 
 ### Bug Reports
 
-Perfect code is rare, and the Slack client is no exception.  If you find a bug, or feel something is acting strangely,
-please [file an issue](https://github.com/slackrpg/slack-client/issues/new) so that it can be addressed.  When
+Perfect code is rare, and the Slack ORM module is no exception.  If you find a bug, or feel something is acting
+strangely, please [file an issue](https://github.com/slackrpg/slack-orm/issues/new) so that it can be addressed.  When
 filing an issue, please provide the following information:
 
 * What version of the module you were using
@@ -40,7 +40,7 @@ filing an issue, please provide the following information:
 ### Feature Requests
 
 We love ideas of any form.  Even if you can't add a feature on your own, we welcome all suggestions.  When making a
-feature request, please [file an issue](https://github.com/slackrpg/slack-client/issues/new) and provide the
+feature request, please [file an issue](https://github.com/slackrpg/slack-orm/issues/new) and provide the
 following information:
 
 * The problem you want to solve
@@ -49,9 +49,9 @@ following information:
 
 ## Working on Issues
 
-All bugs and features are stored in our [GitHub Issues](https://github.com/slackrpg/slack-client/issues)
+All bugs and features are stored in our [GitHub Issues](https://github.com/slackrpg/slack-orm/issues)
 section. It is here that we determine which issues will be roadmapped for various releases, and plan our
-[milestones](https://github.com/slackrpg/slack-client/milestones) accordingly.  All issues that are received
+[milestones](https://github.com/slackrpg/slack-orm/milestones) accordingly.  All issues that are received
 will be reviewed by the core development staff and assigned a milestone for release.
 
 If you intend to work on a specific issue, please add a comment to the issue saying so and indicate when you think
@@ -61,8 +61,8 @@ simply add a comment letting people know so someone else can pick it up.
 
 ### Pull Requests
 
-All contributions to the The Slack client repository must go through a
-[GitHub Pull Request](https://github.com/slackrpg/slack-client/pulls).  In addition, all Pull Requests must be
+All contributions to the the Slack ORM repository must go through a
+[GitHub Pull Request](https://github.com/slackrpg/slack-orm/pulls).  In addition, all Pull Requests must be
 directly related to an open issue.  All pull requests should follow a very specific process:
 
 **1. Open or choose an issue to work on**
@@ -76,17 +76,17 @@ request that the issue be identified for release before you begin working.
 Let us know when you plan to start on the issue and how long you think it will take you.  This will help us be ready
 to support you when it comes time to review.
 
-**3. Fork the The Slack client repository**
+**3. Fork the Slack ORM repository**
 
 Every contributor, including our core staff, are required to work within a fork of their own repository.  All branches
-on the The Slack client repository are meant for production purposes only.
+on the Slack ORM repository are meant for production purposes only.
 
-**4. Add the The Slack client upstream remote**
+**4. Add the Slack ORM upstream remote**
 
 In order to keep your code up to date with master, you need to add the Gizmobodo repostiory as your upstream:
 
 ```bash
-git remote add upstream https://github.com/slackrpg/slack-client
+git remote add upstream https://github.com/slackrpg/slack-orm
 ```
 
 **5. Ensure that your master branch is up to date with the upstream**
@@ -172,7 +172,7 @@ from your fork.
 
 **12. Watch for status**
 
-All pull requests are sent through [Travis-CI](https://travis-ci.org/slackrpg/slack-client) to ensure tests and
+All pull requests are sent through [Travis-CI](https://travis-ci.org/slackrpg/slack-orm) to ensure tests and
 standards are passed.  If the build passes or fails, it will show up on the pull request.  We cannot accept any Pull
 Requests that fail a Travis-CI build, so if that happens, please fix and re-squash your commits, and then update the
 Pull Request to trigger another build.
@@ -180,7 +180,7 @@ Pull Request to trigger another build.
 
 ## Code Style Requirements
 
-All Javascript code provided to the Slack client must follow a strict set of code standards to prevent unnecessary
+All Javascript code provided to the Slack ORM module must follow a strict set of code standards to prevent unnecessary
 commit logs from being introduced due to formatting.  As such, a [ESLint](http://eslint.org/) and
 [JSHint](http://jshint.com/) series of check rules are in place to enforce these standards.
 
