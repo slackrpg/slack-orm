@@ -1,0 +1,42 @@
+{
+    "name"        : "slack-orm",
+    "version"     : "0.0.0",
+    "description" : "An object relational model for interacting with the Slack API.",
+    "license"     : "MIT",
+    "homepage"    : "https://github.com/slackrpg/slack-orm",
+    
+    "author"      : {
+        "name" : "Andrew Vaughan",
+        "url"  : "https://andrewvaughan.io"
+    },
+    
+    "keywords": [
+        "slack",
+        "rtm",
+        "orm",
+        "api",
+        "rest"
+    ],
+    
+    "repository"   : "slackrpg/slack-orm.git",
+    "bugs"         : "https://github.com/slackrpg/slack-orm/issues",
+    "contributors" : "https://github.com/slackrpg/slack-orm/graphs/contributors",
+    
+    "main": "./lib/client",
+    
+    "scripts": {
+        "test": "gulp test"
+    },
+    
+    "engines": {
+        "node": ">= 4.2.x"
+    },
+    
+    "dependencies": {
+        
+    },
+    
+    "devDependencies": {
+        
+    }
+}
