@@ -10,6 +10,38 @@ Provides an Object Relationional Model for interfacing with the Slack API.
 [![Dependency Status][dependency-image]][dependency-url]
 
 
+### Usage
+
+Add the Slack ORM NPM to your Node.js project:
+
+```bash
+npm install slack-orm --save
+```
+
+To call the [Slack REST API](https://api.slack.com/methods) directly, you can make use of the API adapter, which
+follows a [Promise](http://www.html5rocks.com/en/tutorials/es6/promises/) pattern:
+
+```javascript
+var SlackORM = require('slack-orm'),
+    
+    slack = new SlackORM('my-token-from-slack'),
+    
+    params = {
+        foo : 'bar'
+    };
+
+slack.api
+    .call('api.test', params)
+    .then(function(response) {
+        console.log("Slack OK: ", response.ok ? "YES" : "NO");
+        console.log("Foo: ", response.args.foo);
+    })
+    .catch(function(err) {
+        console.warn("Slack Error: ", err);
+    });
+```
+
+
 ### Contributing
 
 There are many ways to contribute to the Slack ORM module!  If you have an idea, or have discovered a bug, please
