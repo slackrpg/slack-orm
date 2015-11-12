@@ -71,3 +71,45 @@ gulp.task('coverage', ['setup-coverage'], function() {
         .pipe($.mocha())
         .pipe($.istanbul.writeReports());
 });
+
+
+/**
+ * Changelog
+ *
+ * Outputs a markdown version of the changelog between the previous two tags.
+ */
+gulp.task('changelog', function() {
+    var tagString;
+    
+    function printChangeLog(err, stdout) {
+        if (err) {
+            throw err;
+        }
+        
+        process.stdout.write('\nChangelog between tags ' + tagString + ':\n\n');
+        process.stdout.write(stdout + '\n');
+    }
+    
+    function getPrevTag(err, stdout) {
+        if (!err) {
+            tagString = stdout.trim() + '..' + tagString;
+        }
+        
+        $.git.exec({args : 'log ' + tagString + ' --no-merges --reverse --pretty=format:\'- [view](https://github.com/slackrpg/slack-orm/commit/%H) &bull; %s\''}, printChangeLog);
+    }
+    
+    function getLatestTag(err, stdout) {
+        if (err) {
+            throw err;
+        }
+        
+        tagString = stdout.trim();
+        
+        $.git.exec({args : 'describe --abbrev=0 --tags ' + tagString + '~1'}, getPrevTag);
+    }
+    
+    
+    // Fire off our chain
+    $.git.exec({args : 'describe --abbrev=0 --tags'}, getLatestTag);
+    
+});
