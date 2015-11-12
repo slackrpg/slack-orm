@@ -39,6 +39,7 @@
     "devDependencies": {
         "browser-sync"      : "~2.10.0",
         "gulp-eslint"       : "~1.1.0",
+        "gulp-git"          : "~1.6.0",
         "gulp-if"           : "~2.0.0",
         "gulp-istanbul"     : "~0.10.2",
         "gulp-jshint"       : "~1.12.0",
