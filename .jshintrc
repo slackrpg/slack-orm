@@ -68,7 +68,8 @@
     "predef": [
         "requirejs",
         "require",
-        "define"
+        "define",
+        "-Promise"
     ]
     
 }
