@@ -1,6 +1,6 @@
 {
     "name"        : "slack-orm",
-    "version"     : "0.0.0",
+    "version"     : "0.1.0",
     "description" : "An object relational model for interacting with the Slack API.",
     "license"     : "MIT",
     "homepage"    : "https://github.com/slackrpg/slack-orm",
