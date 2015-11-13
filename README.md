@@ -68,8 +68,8 @@ Copyright &copy; 2015 Andrew Vaughan - Released under the [MIT license](LICENSE)
 
 
 
-[version-image]:    http://img.shields.io/badge/version-0.1.0-blue.svg?style=flat
-[version-url]:      https://github.com/slackrpg/slack-orm/releases
+[version-image]:    http://img.shields.io/badge/npm-0.1.0-blue.svg?style=flat
+[version-url]:      https://www.npmjs.com/package/slack-orm
 [build-url]:        https://travis-ci.org/slackrpg/slack-orm
 [build-image]:      https://travis-ci.org/slackrpg/slack-orm.svg?branch=master
 [docs-image]:       http://inch-ci.org/github/slackrpg/slack-orm.svg?branch=master
