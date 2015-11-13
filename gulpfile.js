@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 
     $ = require('gulp-load-plugins')(),
 
-    jsFiles = ['gulpfile.js', 'lib/**/*.js'],
+    jsFiles = ['lib/**/*.js'],
+    lintFiles = ['gulpfile.js', 'lib/**/*.js'],
     testFiles = ['test/**/*.js'];
 
 
@@ -13,7 +14,7 @@ var gulp = require('gulp'),
  * Tests for code quality and source standards.
  */
 gulp.task('jshint', function() {
-    return gulp.src(jsFiles)
+    return gulp.src(lintFiles)
         .pipe(browserSync.reload({
             stream : true,
             once   : true
@@ -30,7 +31,7 @@ gulp.task('jshint', function() {
  * Tests for code style accuracy.
  */
 gulp.task('eslint', function() {
-    return gulp.src(jsFiles)
+    return gulp.src(lintFiles)
         .pipe($.eslint())
         .pipe($.eslint.format())
         .pipe($.eslint.failOnError());
@@ -55,7 +56,9 @@ gulp.task('test', ['jshint', 'eslint'], function() {
  */
 gulp.task('setup-coverage', function() {
     return gulp.src(jsFiles)
-        .pipe($.istanbul())
+        .pipe($.istanbul({
+            includeUntested : true
+        }))
         .pipe($.istanbul.hookRequire())
         .pipe(gulp.dest('coverage/'));
 });
