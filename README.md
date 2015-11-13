@@ -57,7 +57,7 @@ Releases of the Slack ORM module follow [Semantic Versioning](http://semver.org/
 versioning scheme of the following format:
 
 * `MAJOR` - modified when major, incompatible changes are made to the library,
-* `MINOR` - modified when functionality is added in a backwards-compatible mannder, and
+* `MINOR` - modified when functionality is added in a backwards-compatible manner, and
 * `PATCH` - patches to existing functionality, such as documentation and bug fixes.
 
 
