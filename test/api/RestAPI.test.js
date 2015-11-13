@@ -18,6 +18,24 @@ describe('The REST API adapter', function() {
     });
     
     
+    it('should take an API call with no properties', function(done) {
+        api.call('api.test')
+            .then(function(value) {
+                value.should.be.a.Object;
+                value.should.have.keys('ok', 'args');
+        
+                value.ok.should.equal.true;
+        
+                value.args.should.have.keys('token');
+            
+                done();
+            })
+            .catch(function(err) {
+                done(err);
+            });
+    });
+    
+    
     it('should connect to api.test with multiple properties', function(done) {
         var data = {
             a : 1,
