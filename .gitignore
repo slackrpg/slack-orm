@@ -5,6 +5,9 @@
 # https://help.github.com/articles/ignoring-files/#create-a-global-gitignore
 
 
+test.js
+
+
 ## Logs
 logs
 *.log
