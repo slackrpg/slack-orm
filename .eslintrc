@@ -162,7 +162,7 @@
         "linebreak-style": [2, "unix"],
         
         // Disallow too many nested callbacks
-        "max-nested-callbacks": [2, 3],
+        "max-nested-callbacks": [2, 4],
         
         // Enforce capital letters to start all new constructors
         "new-cap": 2,
