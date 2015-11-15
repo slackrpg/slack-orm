@@ -4,7 +4,7 @@ var should = require('should'),
     sinon = require('sinon'),
     
     // Test items
-    RestAPI = require('../../lib/api/RestAPI'),
+    rest = require('../../lib/api/rest'),
     SlackError = require('../../lib/error/SlackError');
 
 
@@ -14,7 +14,7 @@ describe('The REST API adapter', function() {
     
     
     before(function() {
-        api = new RestAPI('');
+        api = rest('');
     });
     
     
