@@ -10,7 +10,7 @@ Provides an Object Relationional Model for interfacing with the Slack API.
 [![Dependency Status][dependency-image]][dependency-url]
 
 
-### Usage
+## Installation
 
 Add the Slack ORM NPM to your Node.js project:
 
@@ -18,13 +18,22 @@ Add the Slack ORM NPM to your Node.js project:
 npm install slack-orm --save
 ```
 
+
+## Usage
+
+Slack-ORM is intended to be used as an Object-Relational Model.  This functionality is still in early stages, with
+improvments coming on our path to release 1.0.0.
+
+
+### Using the Slack REST API Directly
+
 To call the [Slack REST API](https://api.slack.com/methods) directly, you can make use of the API adapter, which
 follows a [Promise](http://www.html5rocks.com/en/tutorials/es6/promises/) pattern:
 
 ```javascript
-var SlackORM = require('slack-orm'),
+var slackORM = require('slack-orm'),
     
-    slack = new SlackORM('my-token-from-slack'),
+    slack = slackORM('my-token-from-slack'),
     
     params = {
         foo : 'bar'
@@ -42,7 +51,82 @@ slack.api
 ```
 
 
-### Contributing
+### Using the Slack RTM API Directly
+
+Another powerful tool made available by Slack is their [Real Time Messaging API](https://api.slack.com/rtm).  This
+allows for applications to listen to events, and make quick, simplified responses through a WebSocket.  Support for
+the RTM protocols can be used directly with the `rtm` submodule, which also uses the Promse pattern:
+
+```javascript
+var slackORM = require('slack-orm'),
+    
+    slack = slackORM('my-token-from-slack');
+
+
+slack.rtm
+    .on('connected', function() {
+        console.log(">> connected");
+    })
+    .on('disconnected', function() {
+        console.log(">> disconnected");
+    })
+    .on('server-ping', function() {
+        console.log(">> pinged");
+    })
+    .on('ping', function() {
+        console.log(">> ping");
+    })
+    .on('pong', function() {
+        console.log(">> pong");
+    })
+    .on('message', function(response) {
+        console.log(">>>> Incoming Message");
+        console.log(response);
+        console.log("<<<<");
+    });
+
+
+slack.rtm
+  .connect()
+  .then(function(response) {
+    console.log("CONNECTED!");
+  });
+```
+
+The RTM has a number of custom events that can be listened on:
+
+* `connected` - the RTM service has connected
+* `disconnected` - the RTM service has disconnected (either via server disconnect or client)
+* `pinged` - the RTM server pinged the client
+* `ping` - the client pinged the RTM server
+* `pong` - the RTM server replied with a pong
+* `socket-error` - error from the socket (first parameter will contain an object describing the error)
+* Any of the [Slack Events](https://api.slack.com/rtm#events) that can be fired from the Slack RTM API can also be fired and will contain the response object as the callback's first parameter
+
+
+Messages can also be sent through the Slack RTM API as defined in
+[their documentation](https://api.slack.com/rtm#sending_messages):
+
+```javascript
+var slackORM = require('slack-orm'),
+    
+    slack = slackORM('my-token-from-slack');
+
+slack.rtm
+  .connect()
+  .then(function(response) {
+    
+    slack.rtm.send({
+      type    : 'message',
+      channel : 'C024BE91L',
+      text    : 'Hello world'
+    });
+    
+  });
+```
+
+
+## Contributing
 
 There are many ways to contribute to the Slack ORM module!  If you have an idea, or have discovered a bug, please
 [Open an Issue](https://github.com/slackrpg/slack-orm/issues) so it can be addressed.
@@ -51,7 +135,7 @@ If you're interested in contributing to the project through design or developmen
 [Contribution Guidelines](https://github.com/slackrpg/slack-orm/blob/master/CONTRIBUTING.md).
 
 
-### Release Policy
+## Release Policy
 
 Releases of the Slack ORM module follow [Semantic Versioning](http://semver.org/) standards in a `MAJOR.MINOR.PATCH`
 versioning scheme of the following format:
@@ -61,7 +145,7 @@ versioning scheme of the following format:
 * `PATCH` - patches to existing functionality, such as documentation and bug fixes.
 
 
-### License
+## License
 
 Copyright &copy; 2015 Andrew Vaughan - Released under the [MIT license](LICENSE).
 
