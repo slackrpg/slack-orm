@@ -70,7 +70,7 @@ slack.rtm
     .on('disconnected', function() {
         console.log(">> disconnected");
     })
-    .on('server-ping', function() {
+    .on('pinged', function() {
         console.log(">> pinged");
     })
     .on('ping', function() {
