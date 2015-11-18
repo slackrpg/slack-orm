@@ -7,6 +7,10 @@ before_script:
 cache:
     directories:
         - node_modules
+notifications:
+    slack:
+        rooms:
+            secure: "SBxy+ntdNlzHvKEo9ySqq9a1u/VKUs3SxDahSGJRA3tF+7rzpeGIA7nBII+4zvD6bFuaZJ5pdPiV5QAC9fbhGqCjyx5MjprGfX6YmGyKXn7qT13MtRDSmy2AJ6dfy/Qu3DhLqC0+SIG79AgCEK2bJwyeh58wwcW59RgXhoTCM+HCowRNMjsJgOUcgxzM6x5hjg46PfZZ+49Jje9EI2XF5OfbP4TMQR6K/gReIRSAVGfqPkAhSTHYjr9Q0g3ctxpfTi+KjRCujc0hdNA1UvgjJJJlAgP9fiVNd38i4YpVKyvfoyLSsmyGlJp+c4P1MyBm3/+yJIYz30T/hedlBUJCnYLiPft9nfUEUxXye7JJ5H60Ij/+8JA5jG3jGnvE3Y15tKjG9LuT+BOqLOQSw8abjEd9sMPK/FQh06y3+LXrGcqH8EcdOpPPJjT81cjnK4uZvr+V8ovCehia4RCMgtrOPUwPa0IsWzpkF4ovBXdzwXDpRSlquxS5MozgmLugXMJ3eIrANH666Li5TwpEZav2LQQqjC8HJ8ZalNzsoljEG9Y4NNsAMZriziDxtvGgs2AbnQUjxHPCrhqEzO1CmMXk4ePqwLzZfhImmm7TpfiHUs5tQZKQzOnZTUrTNgnbi3mNbFKszCmOw9U8ZwJG0Zo8i0rYYBFgDZH2Bkh95wr7Nyw="
 addons:
     code_climate:
         repo_token:
